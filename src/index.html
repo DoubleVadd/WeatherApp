@@ -3,10 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Weathering NEW</title>
 </head>
 <body>
-    <div>template</div>
+    <header>
+        <label class="switch">
+            <input type="checkbox" id="toggleTheme">
+            <span class="slider round"></span>
+        </label>
+        <label class="switch">
+            <input type="checkbox" id="toggleTemp">
+            <span class="slider round"></span>
+        </label>
+    </header>
+    <main>
+        <article class="weather">
+            <div class="top">
+                <section class="searchBar">
+                    <h1 class="location">Location</h1>
+                    <p class="changeLoc"><input type="text" id="location" placeholder="Change Location">
+                        <button id="search">Search</button>
+                    </p>
+                </section>
+                <section class="temprature">
+                    <h1 class="bigTemp">--<span class="temp-sign">*C</span></h1>
+                    <h2 class="feels">Feels Like<span class="feels-like">--</span><span class="temp-sign">*C</span></h2>
+                </section>
+                <section class="weather-desc">
+                    <h3 class="description">Unknown</h3>
+                    <img src="" alt="sunny" class="weather-img">
+                </section>
+            </div>
+            <hr>
+            <div class="bottom">
+                <ul class="details">
+                    <li class="detail-individual">
+                        <p>UV index <span id="uv">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Cloud %<span id="cloud">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Wind <span id="wind">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Wind Degree <span id="winDeg">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Precipitation <span id="Prec">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Pressure <span id="Pres">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Humidity <span id="Humi">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Gust<span id="Gust">--</span></p>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <a href="git">github Link</a>
+    </footer>
     
 </body>
 </html>
