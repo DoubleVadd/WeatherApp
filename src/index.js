@@ -6,6 +6,9 @@ const display = WeatherDisplay()
 
 const searchbar = document.querySelector('#location')
 const searchBtn = document.querySelector('#search')
+
+display.toggleUnit()
+
 searchBtn.addEventListener('click', () =>{
     if(searchbar.value){
         console.log('searching for ', searchbar.value)
