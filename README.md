@@ -1,2 +1,2 @@
-# vanillaJsWebpackTemplate
-Webpack Template for Vanilla JS, Html and CSS including loading for images and data files
+Simple Weather Application utilising the WeatherAPI.
+Deployment found here: https://doublevadd.github.io/WeatherApp/
