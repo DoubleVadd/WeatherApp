@@ -80,7 +80,7 @@ const WeatherDisplay = () => {
                         <p>Humidity <span id="Humi">${data.humidity}</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Gust<span id="Gust">${data[unit].gust} ${speed}</span></p>
+                        <p>Gust <span id="Gust">${data[unit].gust} ${speed}</span></p>
                     </li>
                 </ul>
                 `
