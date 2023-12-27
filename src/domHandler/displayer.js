@@ -10,7 +10,7 @@ const WeatherDisplay = () => {
         if(current_data){
             current.addEventListener('change', e => {
                 selectedUnit = e.target.checked ? unit[1] : unit[0]
-                console.log(e.target.checked)
+                console.log('changing units')
                 if(current_data){
                     updateLocation(current_data)
                 }
@@ -24,7 +24,7 @@ const WeatherDisplay = () => {
         const all = document.querySelector('body')
         current.addEventListener('change', e => {
             all.className = e.target.checked ? 'theme-light' : 'theme-dark'  
-            console.log(e.target.checked)
+            console.log('changing theme')
         })
     }
 
@@ -52,7 +52,7 @@ const WeatherDisplay = () => {
                     </section>
                     <section class="weather-desc">
                         <h3 class="description">${data.condition}</h3>
-                        <img src="${data.img}" alt="${data.condition}" class="weather-img">
+                        <img src="https://${data.img}" alt="${data.condition}" class="weather-img">
                     </section>
                 `
             bottomSection.innerHTML = 
