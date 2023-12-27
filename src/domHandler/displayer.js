@@ -62,10 +62,10 @@ const WeatherDisplay = () => {
                         <p>UV index <span id="uv">${data.uv}</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Cloud % <span id="cloud">${data.cloud}</span></p>
+                        <p>Cloud <span id="cloud"> ${data.cloud}%</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Wind <span id="wind">${data[unit].wind} ${speed}</span></p>
+                        <p>Wind <span id="wind"> ${data[unit].wind}${speed}</span></p>
                     </li>
                     <li class="detail-individual">
                         <p>Wind Direction <span id="winDir">${data.wind_dir}</span></p>
@@ -74,13 +74,13 @@ const WeatherDisplay = () => {
                         <p>Precipitation <span id="Prec">${data[unit].precip}${depth}</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Air Quality (CO) <span id="Air">${data.air_co}</span></p>
+                        <p>Air Quality (CO) <span id="Air">${data.air_co} μg/m3</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Humidity <span id="Humi">${data.humidity}</span></p>
+                        <p>Humidity <span id="Humi">${data.humidity}%</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Gust <span id="Gust">${data[unit].gust} ${speed}</span></p>
+                        <p>Gust <span id="Gust"> ${data[unit].gust}${speed}</span></p>
                     </li>
                 </ul>
                 `
