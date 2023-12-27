@@ -7,14 +7,26 @@ const WeatherDisplay = () => {
 
     const toggleUnit = () => {
         const current = document.querySelector('#toggleTemp')
-        current.addEventListener('change', e => {
-            selectedUnit = e.target.checked ? unit[1] : unit[0]
-            console.log(e.target.checked)
-            if(current_data){
-                updateLocation(current_data)
-            }
-        })
+        if(current_data){
+            current.addEventListener('change', e => {
+                selectedUnit = e.target.checked ? unit[1] : unit[0]
+                console.log(e.target.checked)
+                if(current_data){
+                    updateLocation(current_data)
+                }
+            })
+        }
+        
     };
+
+    const toggleTheme = () => {
+        const current = document.querySelector('#toggleTheme')
+        const all = document.querySelector('body')
+        current.addEventListener('change', e => {
+            all.className = e.target.checked ? 'theme-light' : 'theme-dark'  
+            console.log(e.target.checked)
+        })
+    }
 
 
     const updateLocation = (data) => {
@@ -24,14 +36,19 @@ const WeatherDisplay = () => {
             const speed = selectedUnit == '°C' ?  'kph' : 'mph'
             const depth = selectedUnit == '°C' ?  'mm' : 'in'
             const location = document.querySelector('.location')
-            location.innerHTML = `<h1 class="location">${data.city},${data.region},${data.country} </h1>`
+            if(data.city === data.region){
+                location.innerHTML = `<h1 class="location">${data.city}, ${data.country} </h1>`
+            } else{
+                location.innerHTML = `<h1 class="location">${data.city}, ${data.region}, ${data.country} </h1>`
+            }
+            
             const topSection = document.querySelector('.top-weather')
             const bottomSection = document.querySelector('.bottom')
             topSection.innerHTML = 
                 `
                     <section class="temprature">
                         <h1 class="bigTemp">${data[unit].temp}<span class="temp-sign">${selectedUnit}</span></h1>
-                        <h2 class="feels">Feels Like<span class="feels-like">${data[unit].feels}</span><span class="temp-sign">${selectedUnit}</span></h2>
+                        <h2 class="feels">Feels Like <span class="feels-like">${data[unit].feels}</span><span class="temp-sign">${selectedUnit}</span></h2>
                     </section>
                     <section class="weather-desc">
                         <h3 class="description">${data.condition}</h3>
@@ -45,7 +62,7 @@ const WeatherDisplay = () => {
                         <p>UV index <span id="uv">${data.uv}</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Cloud %<span id="cloud">${data.cloud}</span></p>
+                        <p>Cloud % <span id="cloud">${data.cloud}</span></p>
                     </li>
                     <li class="detail-individual">
                         <p>Wind <span id="wind">${data[unit].wind} ${speed}</span></p>
@@ -70,6 +87,7 @@ const WeatherDisplay = () => {
 
 
         } else {
+            alert('Could not find location Data')
             console.log('data not available')
         }
     }
@@ -77,7 +95,7 @@ const WeatherDisplay = () => {
 
 
 
-    return {updateLocation, toggleUnit}
+    return {updateLocation, toggleUnit, toggleTheme}
 }
 
 export default WeatherDisplay

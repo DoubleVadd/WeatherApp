@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weathering NEW</title>
+    <link rel="shortcut icon" href="./Images/simple.ico" type="image/x-icon">
+    <title>Simple Weather</title>
 </head>
-<body>
+<body class="theme-dark">
     <header>
+        <p>Dark / Light</p>
         <label class="switch">
-            <p>theme</p>
             <input type="checkbox" id="toggleTheme">
             <span class="slider round"></span>
         </label>
+        <p>°C / °F</p>
         <label class="switch">
-            <p>temp</p>
             <input type="checkbox" id="toggleTemp">
             <span class="slider round"></span>
         </label>
@@ -30,14 +31,13 @@
                 </section>
                 <div class="top-weather">
                     <section class="temprature">
-                        <h1 class="bigTemp">--<span class="temp-sign">°C</span></h1>
-                        <h2 class="feels">Feels Like<span class="feels-like">--</span><span class="temp-sign">°C</span></h2>
+                        <h1 class="bigTemp">10<span class="temp-sign">°C</span></h1>
+                        <h2 class="feels">Feels Like<span class="feels-like"> 15</span><span class="temp-sign">°C</span></h2>
                     </section>
                     <section class="weather-desc">
-                        <h3 class="description">Unknown</h3>
-                        <img src="" alt="sunny" class="weather-img">
+                        <h3 class="description">Clear</h3>
+                        <img src="./Images/moon.png" alt="moon" class="weather-img">
                     </section>
-
                 </div>
                 
             </div>
@@ -48,13 +48,13 @@
                         <p>UV index <span id="uv">--</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Cloud %<span id="cloud">--</span></p>
+                        <p>Cloud % <span id="cloud">--</span></p>
                     </li>
                     <li class="detail-individual">
                         <p>Wind <span id="wind">--</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Wind Direction <span id="winDir"--</span></p>
+                        <p>Wind Direction <span id="winDir">--</span></p>
                     </li>
                     <li class="detail-individual">
                         <p>Precipitation <span id="Prec">--</span></p>
@@ -66,14 +66,14 @@
                         <p>Humidity <span id="Humi">--</span></p>
                     </li>
                     <li class="detail-individual">
-                        <p>Gust<span id="Gust">--</span></p>
+                        <p>Gust<span id="Gust"> --</span></p>
                     </li>
                 </ul>
             </div>
         </article>
     </main>
     <footer>
-        <a href="git">github Link</a>
+        <a href="https://github.com/DoubleVadd/WeatherApp">GitHub</a>
     </footer>
     
 </body>
