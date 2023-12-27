@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Images/simple.ico" type="image/x-icon">
+    <title>Simple Weather</title>
+<link rel="icon" href="simple.ico"><script defer src="main.bundle.js"></script></head>
+<body class="theme-dark">
+    <header>
+        <p>Dark / Light</p>
+        <label class="switch">
+            <input type="checkbox" id="toggleTheme">
+            <span class="slider round"></span>
+        </label>
+        <p>°C / °F</p>
+        <label class="switch">
+            <input type="checkbox" id="toggleTemp">
+            <span class="slider round"></span>
+        </label>
+    </header>
+    <main>
+        <article class="weather">
+            <div class="top">
+                <section class="searchBar">
+                    <h1 class="location">Location</h1>
+                    <p class="changeLoc">
+                        <input type="text" id="location" placeholder="Change Location">
+                        <button id="search">Search</button>
+                    </p>
+                </section>
+                <div class="top-weather">
+                    <section class="temprature">
+                        <h1 class="bigTemp">10<span class="temp-sign">°C</span></h1>
+                        <h2 class="feels">Feels Like<span class="feels-like"> 15</span><span class="temp-sign">°C</span></h2>
+                    </section>
+                    <section class="weather-desc">
+                        <h3 class="description">Clear</h3>
+                        <img src="./Images/moon.png" alt="moon" class="weather-img">
+                    </section>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="bottom">
+                <ul class="details">
+                    <li class="detail-individual">
+                        <p>UV index <span id="uv">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Cloud % <span id="cloud">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Wind <span id="wind">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Wind Direction <span id="winDir">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Precipitation <span id="Prec">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Air Quality (CO) <span id="Air">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Humidity <span id="Humi">--</span></p>
+                    </li>
+                    <li class="detail-individual">
+                        <p>Gust<span id="Gust"> --</span></p>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <a href="https://github.com/DoubleVadd/WeatherApp">GitHub</a>
+    </footer>
+    
+</body>
+</html>
